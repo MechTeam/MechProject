@@ -1,0 +1,7 @@
+c:\users\oleg\documents\visual studio 2012\Projects\HiWorld\HiWorld\bin\Debug\HiWorld.exe.config
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\bin\Debug\HiWorld.exe.config
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\bin\Debug\HiWorld.exe
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\bin\Debug\HiWorld.pdb
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\obj\Debug\HiWorld.csprojResolveAssemblyReference.cache
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\obj\Debug\HiWorld.exe
+E:\Мои говнопроекты\MechProject\HiWorld\HiWorld\obj\Debug\HiWorld.pdb
