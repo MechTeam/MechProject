@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JournalOfTeacherModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="JournalOfTeacherEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Control" EntityType="JournalOfTeacherModel.Control" />
+    <EntitySet Name="ControlType" EntityType="JournalOfTeacherModel.ControlType" />
+    <EntitySet Name="Discipline" EntityType="JournalOfTeacherModel.Discipline" />
+    <EntitySet Name="GroupStud" EntityType="JournalOfTeacherModel.GroupStud" />
+    <EntitySet Name="LessonNum" EntityType="JournalOfTeacherModel.LessonNum" />
+    <EntitySet Name="LessonType" EntityType="JournalOfTeacherModel.LessonType" />
+    <EntitySet Name="Membership" EntityType="JournalOfTeacherModel.Membership" />
+    <EntitySet Name="ProgressOfStudents" EntityType="JournalOfTeacherModel.ProgressOfStudents" />
+    <EntitySet Name="Role" EntityType="JournalOfTeacherModel.Role" />
+    <EntitySet Name="Schedule" EntityType="JournalOfTeacherModel.Schedule" />
+    <EntitySet Name="Student" EntityType="JournalOfTeacherModel.Student" />
+    <EntitySet Name="StudentInLesson" EntityType="JournalOfTeacherModel.StudentInLesson" />
+    <EntitySet Name="Teacher" EntityType="JournalOfTeacherModel.Teacher" />
+    <EntitySet Name="User" EntityType="JournalOfTeacherModel.User" />
+    <AssociationSet Name="FK_Control_ControlType" Association="JournalOfTeacherModel.FK_Control_ControlType">
+      <End Role="ControlType" EntitySet="ControlType" />
+      <End Role="Control" EntitySet="Control" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Control_Discipline" Association="JournalOfTeacherModel.FK_Control_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Control" EntitySet="Control" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgressOfStudents_Control" Association="JournalOfTeacherModel.FK_ProgressOfStudents_Control">
+      <End Role="Control" EntitySet="Control" />
+      <End Role="ProgressOfStudents" EntitySet="ProgressOfStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Discipline" Association="JournalOfTeacherModel.FK_Schedule_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_GroupStud" Association="JournalOfTeacherModel.FK_Schedule_GroupStud">
+      <End Role="GroupStud" EntitySet="GroupStud" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_GroupStud" Association="JournalOfTeacherModel.FK_Student_GroupStud">
+      <End Role="GroupStud" EntitySet="GroupStud" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_LessonNum" Association="JournalOfTeacherModel.FK_Schedule_LessonNum">
+      <End Role="LessonNum" EntitySet="LessonNum" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_LessonType" Association="JournalOfTeacherModel.FK_Schedule_LessonType">
+      <End Role="LessonType" EntitySet="LessonType" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Membership" Association="JournalOfTeacherModel.FK_User_Membership">
+      <End Role="Membership" EntitySet="Membership" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgressOfStudents_StudentInLesson" Association="JournalOfTeacherModel.FK_ProgressOfStudents_StudentInLesson">
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+      <End Role="ProgressOfStudents" EntitySet="ProgressOfStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Teacher" Association="JournalOfTeacherModel.FK_Schedule_Teacher">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInLesson_Schedule" Association="JournalOfTeacherModel.FK_StudentInLesson_Schedule">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_User" Association="JournalOfTeacherModel.FK_Student_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInLesson_Student" Association="JournalOfTeacherModel.FK_StudentInLesson_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Teacher" Association="JournalOfTeacherModel.FK_User_Teacher">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="UserInRole" Association="JournalOfTeacherModel.UserInRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Control">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="MaxPoints" Type="Int32" Nullable="false" />
+    <Property Name="MinPoints" Type="Int32" Nullable="false" />
+    <Property Name="ID_ContolType" Type="Guid" Nullable="false" />
+    <Property Name="ID_Discipline" Type="Guid" Nullable="false" />
+    <Property Name="ModuleNum" Type="Int32" Nullable="false" />
+    <Property Name="NumControl" Type="Int32" Nullable="false" />
+    <Property Name="Week" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ControlType" Relationship="JournalOfTeacherModel.FK_Control_ControlType" FromRole="Control" ToRole="ControlType" />
+    <NavigationProperty Name="Discipline" Relationship="JournalOfTeacherModel.FK_Control_Discipline" FromRole="Control" ToRole="Discipline" />
+    <NavigationProperty Name="ProgressOfStudents" Relationship="JournalOfTeacherModel.FK_ProgressOfStudents_Control" FromRole="Control" ToRole="ProgressOfStudents" />
+  </EntityType>
+  <EntityType Name="ControlType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Control" Relationship="JournalOfTeacherModel.FK_Control_ControlType" FromRole="ControlType" ToRole="Control" />
+  </EntityType>
+  <EntityType Name="Discipline">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Control" Relationship="JournalOfTeacherModel.FK_Control_Discipline" FromRole="Discipline" ToRole="Control" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_Schedule_Discipline" FromRole="Discipline" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="GroupStud">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="YearEntrance" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_Schedule_GroupStud" FromRole="GroupStud" ToRole="Schedule" />
+    <NavigationProperty Name="Student" Relationship="JournalOfTeacherModel.FK_Student_GroupStud" FromRole="GroupStud" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="LessonNum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="FinishTime" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_Schedule_LessonNum" FromRole="LessonNum" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="LessonType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_Schedule_LessonType" FromRole="LessonType" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="JournalOfTeacherModel.FK_User_Membership" FromRole="Membership" ToRole="User" />
+  </EntityType>
+  <EntityType Name="ProgressOfStudents">
+    <Key>
+      <PropertyRef Name="ID_StudentInLesson" />
+      <PropertyRef Name="ID_Control" />
+    </Key>
+    <Property Name="ID_StudentInLesson" Type="Guid" Nullable="false" />
+    <Property Name="ID_Control" Type="Guid" Nullable="false" />
+    <Property Name="Points" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Control" Relationship="JournalOfTeacherModel.FK_ProgressOfStudents_Control" FromRole="ProgressOfStudents" ToRole="Control" />
+    <NavigationProperty Name="StudentInLesson" Relationship="JournalOfTeacherModel.FK_ProgressOfStudents_StudentInLesson" FromRole="ProgressOfStudents" ToRole="StudentInLesson" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="User" Relationship="JournalOfTeacherModel.UserInRole" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="ID_Discipline" Type="Guid" Nullable="false" />
+    <Property Name="ID_GroupStud" Type="Guid" Nullable="false" />
+    <Property Name="ID_Teacher" Type="Guid" Nullable="false" />
+    <Property Name="ID_LessonType" Type="Guid" Nullable="false" />
+    <Property Name="ID_LessonNum" Type="Int32" Nullable="false" />
+    <Property Name="LectureRoom" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Discipline" Relationship="JournalOfTeacherModel.FK_Schedule_Discipline" FromRole="Schedule" ToRole="Discipline" />
+    <NavigationProperty Name="GroupStud" Relationship="JournalOfTeacherModel.FK_Schedule_GroupStud" FromRole="Schedule" ToRole="GroupStud" />
+    <NavigationProperty Name="LessonNum" Relationship="JournalOfTeacherModel.FK_Schedule_LessonNum" FromRole="Schedule" ToRole="LessonNum" />
+    <NavigationProperty Name="LessonType" Relationship="JournalOfTeacherModel.FK_Schedule_LessonType" FromRole="Schedule" ToRole="LessonType" />
+    <NavigationProperty Name="Teacher" Relationship="JournalOfTeacherModel.FK_Schedule_Teacher" FromRole="Schedule" ToRole="Teacher" />
+    <NavigationProperty Name="StudentInLesson" Relationship="JournalOfTeacherModel.FK_StudentInLesson_Schedule" FromRole="Schedule" ToRole="StudentInLesson" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="Guid" Nullable="false" />
+    <Property Name="ID_GroupStud" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="GroupStud" Relationship="JournalOfTeacherModel.FK_Student_GroupStud" FromRole="Student" ToRole="GroupStud" />
+    <NavigationProperty Name="User" Relationship="JournalOfTeacherModel.FK_Student_User" FromRole="Student" ToRole="User" />
+    <NavigationProperty Name="StudentInLesson" Relationship="JournalOfTeacherModel.FK_StudentInLesson_Student" FromRole="Student" ToRole="StudentInLesson" />
+  </EntityType>
+  <EntityType Name="StudentInLesson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="ID_Student" Type="Guid" Nullable="false" />
+    <Property Name="ID_Shedule" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ProgressOfStudents" Relationship="JournalOfTeacherModel.FK_ProgressOfStudents_StudentInLesson" FromRole="StudentInLesson" ToRole="ProgressOfStudents" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_StudentInLesson_Schedule" FromRole="StudentInLesson" ToRole="Schedule" />
+    <NavigationProperty Name="Student" Relationship="JournalOfTeacherModel.FK_StudentInLesson_Student" FromRole="StudentInLesson" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Schedule" Relationship="JournalOfTeacherModel.FK_Schedule_Teacher" FromRole="Teacher" ToRole="Schedule" />
+    <NavigationProperty Name="User" Relationship="JournalOfTeacherModel.FK_User_Teacher" FromRole="Teacher" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="SecondName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Membership" Relationship="JournalOfTeacherModel.FK_User_Membership" FromRole="User" ToRole="Membership" />
+    <NavigationProperty Name="Student" Relationship="JournalOfTeacherModel.FK_Student_User" FromRole="User" ToRole="Student" />
+    <NavigationProperty Name="Teacher" Relationship="JournalOfTeacherModel.FK_User_Teacher" FromRole="User" ToRole="Teacher" />
+    <NavigationProperty Name="Role" Relationship="JournalOfTeacherModel.UserInRole" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK_Control_ControlType">
+    <End Role="ControlType" Type="JournalOfTeacherModel.ControlType" Multiplicity="1" />
+    <End Role="Control" Type="JournalOfTeacherModel.Control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Control">
+        <PropertyRef Name="ID_ContolType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Control_Discipline">
+    <End Role="Discipline" Type="JournalOfTeacherModel.Discipline" Multiplicity="1" />
+    <End Role="Control" Type="JournalOfTeacherModel.Control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Control">
+        <PropertyRef Name="ID_Discipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgressOfStudents_Control">
+    <End Role="Control" Type="JournalOfTeacherModel.Control" Multiplicity="1" />
+    <End Role="ProgressOfStudents" Type="JournalOfTeacherModel.ProgressOfStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Control">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProgressOfStudents">
+        <PropertyRef Name="ID_Control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Discipline">
+    <End Role="Discipline" Type="JournalOfTeacherModel.Discipline" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_Discipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_GroupStud">
+    <End Role="GroupStud" Type="JournalOfTeacherModel.GroupStud" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupStud">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_GroupStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_GroupStud">
+    <End Role="GroupStud" Type="JournalOfTeacherModel.GroupStud" Multiplicity="1" />
+    <End Role="Student" Type="JournalOfTeacherModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupStud">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ID_GroupStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_LessonNum">
+    <End Role="LessonNum" Type="JournalOfTeacherModel.LessonNum" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LessonNum">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_LessonNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_LessonType">
+    <End Role="LessonType" Type="JournalOfTeacherModel.LessonType" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LessonType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_LessonType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Membership">
+    <End Role="Membership" Type="JournalOfTeacherModel.Membership" Multiplicity="1" />
+    <End Role="User" Type="JournalOfTeacherModel.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Membership">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgressOfStudents_StudentInLesson">
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.StudentInLesson" Multiplicity="1" />
+    <End Role="ProgressOfStudents" Type="JournalOfTeacherModel.ProgressOfStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInLesson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProgressOfStudents">
+        <PropertyRef Name="ID_StudentInLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Teacher">
+    <End Role="Teacher" Type="JournalOfTeacherModel.Teacher" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_Teacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInLesson_Schedule">
+    <End Role="Schedule" Type="JournalOfTeacherModel.Schedule" Multiplicity="1" />
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.StudentInLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentInLesson">
+        <PropertyRef Name="ID_Shedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_User">
+    <End Role="User" Type="JournalOfTeacherModel.User" Multiplicity="1" />
+    <End Role="Student" Type="JournalOfTeacherModel.Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInLesson_Student">
+    <End Role="Student" Type="JournalOfTeacherModel.Student" Multiplicity="1" />
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.StudentInLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="StudentInLesson">
+        <PropertyRef Name="ID_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Teacher">
+    <End Role="Teacher" Type="JournalOfTeacherModel.Teacher" Multiplicity="1" />
+    <End Role="User" Type="JournalOfTeacherModel.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserInRole">
+    <End Role="Role" Type="JournalOfTeacherModel.Role" Multiplicity="*" />
+    <End Role="User" Type="JournalOfTeacherModel.User" Multiplicity="*" />
+  </Association>
+</Schema>

@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JournalOfTeacherModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="JournalOfTeacherModelStoreContainer">
+    <EntitySet Name="Control" EntityType="JournalOfTeacherModel.Store.Control" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ControlType" EntityType="JournalOfTeacherModel.Store.ControlType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Discipline" EntityType="JournalOfTeacherModel.Store.Discipline" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupStud" EntityType="JournalOfTeacherModel.Store.GroupStud" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LessonNum" EntityType="JournalOfTeacherModel.Store.LessonNum" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LessonType" EntityType="JournalOfTeacherModel.Store.LessonType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Membership" EntityType="JournalOfTeacherModel.Store.Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProgressOfStudents" EntityType="JournalOfTeacherModel.Store.ProgressOfStudents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="JournalOfTeacherModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Schedule" EntityType="JournalOfTeacherModel.Store.Schedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student" EntityType="JournalOfTeacherModel.Store.Student" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentInLesson" EntityType="JournalOfTeacherModel.Store.StudentInLesson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teacher" EntityType="JournalOfTeacherModel.Store.Teacher" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="JournalOfTeacherModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserInRole" EntityType="JournalOfTeacherModel.Store.UserInRole" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Control_ControlType" Association="JournalOfTeacherModel.Store.FK_Control_ControlType">
+      <End Role="ControlType" EntitySet="ControlType" />
+      <End Role="Control" EntitySet="Control" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Control_Discipline" Association="JournalOfTeacherModel.Store.FK_Control_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Control" EntitySet="Control" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgressOfStudents_Control" Association="JournalOfTeacherModel.Store.FK_ProgressOfStudents_Control">
+      <End Role="Control" EntitySet="Control" />
+      <End Role="ProgressOfStudents" EntitySet="ProgressOfStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Discipline" Association="JournalOfTeacherModel.Store.FK_Schedule_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_GroupStud" Association="JournalOfTeacherModel.Store.FK_Schedule_GroupStud">
+      <End Role="GroupStud" EntitySet="GroupStud" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_GroupStud" Association="JournalOfTeacherModel.Store.FK_Student_GroupStud">
+      <End Role="GroupStud" EntitySet="GroupStud" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_LessonNum" Association="JournalOfTeacherModel.Store.FK_Schedule_LessonNum">
+      <End Role="LessonNum" EntitySet="LessonNum" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_LessonType" Association="JournalOfTeacherModel.Store.FK_Schedule_LessonType">
+      <End Role="LessonType" EntitySet="LessonType" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Membership" Association="JournalOfTeacherModel.Store.FK_User_Membership">
+      <End Role="Membership" EntitySet="Membership" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgressOfStudents_StudentInLesson" Association="JournalOfTeacherModel.Store.FK_ProgressOfStudents_StudentInLesson">
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+      <End Role="ProgressOfStudents" EntitySet="ProgressOfStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Teacher" Association="JournalOfTeacherModel.Store.FK_Schedule_Teacher">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInLesson_Schedule" Association="JournalOfTeacherModel.Store.FK_StudentInLesson_Schedule">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_User" Association="JournalOfTeacherModel.Store.FK_Student_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInLesson_Student" Association="JournalOfTeacherModel.Store.FK_StudentInLesson_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentInLesson" EntitySet="StudentInLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Teacher" Association="JournalOfTeacherModel.Store.FK_User_Teacher">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInRole_Role" Association="JournalOfTeacherModel.Store.FK_UserInRole_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="UserInRole" EntitySet="UserInRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInRole_User" Association="JournalOfTeacherModel.Store.FK_UserInRole_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserInRole" EntitySet="UserInRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Control">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="MaxPoints" Type="int" Nullable="false" />
+    <Property Name="MinPoints" Type="int" Nullable="false" />
+    <Property Name="ID_ContolType" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Discipline" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModuleNum" Type="int" Nullable="false" />
+    <Property Name="NumControl" Type="int" Nullable="false" />
+    <Property Name="Week" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ControlType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="true" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Discipline">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GroupStud">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="YearEntrance" Type="nchar" Nullable="false" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="LessonNum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="StartTime" Type="time" Nullable="false" Precision="7" />
+    <Property Name="FinishTime" Type="time" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="LessonType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="true" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ConfirmationToken" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" Nullable="true" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" Nullable="true" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" Nullable="true" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ProgressOfStudents">
+    <Key>
+      <PropertyRef Name="ID_StudentInLesson" />
+      <PropertyRef Name="ID_Control" />
+    </Key>
+    <Property Name="ID_StudentInLesson" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Control" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Discipline" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_GroupStud" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Teacher" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_LessonType" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_LessonNum" Type="int" Nullable="false" />
+    <Property Name="LectureRoom" Type="nchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_GroupStud" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentInLesson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Student" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Shedule" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="SecondName" Type="nchar" Nullable="false" MaxLength="40" />
+    <Property Name="Email" Type="nchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="UserInRole">
+    <Key>
+      <PropertyRef Name="Role_ID" />
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="Role_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="User_ID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Control_ControlType">
+    <End Role="ControlType" Type="JournalOfTeacherModel.Store.ControlType" Multiplicity="1" />
+    <End Role="Control" Type="JournalOfTeacherModel.Store.Control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Control">
+        <PropertyRef Name="ID_ContolType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Control_Discipline">
+    <End Role="Discipline" Type="JournalOfTeacherModel.Store.Discipline" Multiplicity="1" />
+    <End Role="Control" Type="JournalOfTeacherModel.Store.Control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Control">
+        <PropertyRef Name="ID_Discipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgressOfStudents_Control">
+    <End Role="Control" Type="JournalOfTeacherModel.Store.Control" Multiplicity="1" />
+    <End Role="ProgressOfStudents" Type="JournalOfTeacherModel.Store.ProgressOfStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Control">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProgressOfStudents">
+        <PropertyRef Name="ID_Control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Discipline">
+    <End Role="Discipline" Type="JournalOfTeacherModel.Store.Discipline" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_Discipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_GroupStud">
+    <End Role="GroupStud" Type="JournalOfTeacherModel.Store.GroupStud" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupStud">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_GroupStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_GroupStud">
+    <End Role="GroupStud" Type="JournalOfTeacherModel.Store.GroupStud" Multiplicity="1" />
+    <End Role="Student" Type="JournalOfTeacherModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupStud">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ID_GroupStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_LessonNum">
+    <End Role="LessonNum" Type="JournalOfTeacherModel.Store.LessonNum" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LessonNum">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_LessonNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_LessonType">
+    <End Role="LessonType" Type="JournalOfTeacherModel.Store.LessonType" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LessonType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_LessonType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Membership">
+    <End Role="Membership" Type="JournalOfTeacherModel.Store.Membership" Multiplicity="1" />
+    <End Role="User" Type="JournalOfTeacherModel.Store.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Membership">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgressOfStudents_StudentInLesson">
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.Store.StudentInLesson" Multiplicity="1" />
+    <End Role="ProgressOfStudents" Type="JournalOfTeacherModel.Store.ProgressOfStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInLesson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProgressOfStudents">
+        <PropertyRef Name="ID_StudentInLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Teacher">
+    <End Role="Teacher" Type="JournalOfTeacherModel.Store.Teacher" Multiplicity="1" />
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ID_Teacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInLesson_Schedule">
+    <End Role="Schedule" Type="JournalOfTeacherModel.Store.Schedule" Multiplicity="1" />
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.Store.StudentInLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentInLesson">
+        <PropertyRef Name="ID_Shedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_User">
+    <End Role="User" Type="JournalOfTeacherModel.Store.User" Multiplicity="1" />
+    <End Role="Student" Type="JournalOfTeacherModel.Store.Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInLesson_Student">
+    <End Role="Student" Type="JournalOfTeacherModel.Store.Student" Multiplicity="1" />
+    <End Role="StudentInLesson" Type="JournalOfTeacherModel.Store.StudentInLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="StudentInLesson">
+        <PropertyRef Name="ID_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Teacher">
+    <End Role="Teacher" Type="JournalOfTeacherModel.Store.Teacher" Multiplicity="1" />
+    <End Role="User" Type="JournalOfTeacherModel.Store.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInRole_Role">
+    <End Role="Role" Type="JournalOfTeacherModel.Store.Role" Multiplicity="1" />
+    <End Role="UserInRole" Type="JournalOfTeacherModel.Store.UserInRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserInRole">
+        <PropertyRef Name="Role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInRole_User">
+    <End Role="UserInRole" Type="JournalOfTeacherModel.Store.UserInRole" Multiplicity="*" />
+    <End Role="User" Type="JournalOfTeacherModel.Store.User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserInRole">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JournalOfTeacherModelStoreContainer" CdmEntityContainer="JournalOfTeacherEntities">
+    <EntitySetMapping Name="Control">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Control)">
+        <MappingFragment StoreEntitySet="Control">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MaxPoints" ColumnName="MaxPoints" />
+          <ScalarProperty Name="MinPoints" ColumnName="MinPoints" />
+          <ScalarProperty Name="ID_ContolType" ColumnName="ID_ContolType" />
+          <ScalarProperty Name="ID_Discipline" ColumnName="ID_Discipline" />
+          <ScalarProperty Name="ModuleNum" ColumnName="ModuleNum" />
+          <ScalarProperty Name="NumControl" ColumnName="NumControl" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlType">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.ControlType)">
+        <MappingFragment StoreEntitySet="ControlType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discipline">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Discipline)">
+        <MappingFragment StoreEntitySet="Discipline">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupStud">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.GroupStud)">
+        <MappingFragment StoreEntitySet="GroupStud">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="YearEntrance" ColumnName="YearEntrance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LessonNum">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.LessonNum)">
+        <MappingFragment StoreEntitySet="LessonNum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="FinishTime" ColumnName="FinishTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LessonType">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.LessonType)">
+        <MappingFragment StoreEntitySet="LessonType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Membership">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Membership)">
+        <MappingFragment StoreEntitySet="Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgressOfStudents">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.ProgressOfStudents)">
+        <MappingFragment StoreEntitySet="ProgressOfStudents">
+          <ScalarProperty Name="ID_StudentInLesson" ColumnName="ID_StudentInLesson" />
+          <ScalarProperty Name="ID_Control" ColumnName="ID_Control" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Role)">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Schedule)">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Discipline" ColumnName="ID_Discipline" />
+          <ScalarProperty Name="ID_GroupStud" ColumnName="ID_GroupStud" />
+          <ScalarProperty Name="ID_Teacher" ColumnName="ID_Teacher" />
+          <ScalarProperty Name="ID_LessonType" ColumnName="ID_LessonType" />
+          <ScalarProperty Name="ID_LessonNum" ColumnName="ID_LessonNum" />
+          <ScalarProperty Name="LectureRoom" ColumnName="LectureRoom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Student)">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+          <ScalarProperty Name="ID_GroupStud" ColumnName="ID_GroupStud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentInLesson">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.StudentInLesson)">
+        <MappingFragment StoreEntitySet="StudentInLesson">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="ID_Shedule" ColumnName="ID_Shedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.Teacher)">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="IsTypeOf(JournalOfTeacherModel.User)">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserInRole" TypeName="JournalOfTeacherModel.UserInRole" StoreEntitySet="UserInRole">
+      <EndProperty Name="Role">
+        <ScalarProperty Name="ID" ColumnName="Role_ID" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="ID" ColumnName="User_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
