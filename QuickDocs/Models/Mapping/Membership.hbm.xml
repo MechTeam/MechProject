@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Membership" table="Membership">
+    <id name="ID">
+      <column name="Id"></column>
+      <generator class="guid"></generator>
+    </id>
+    <date name="CreateDate">
+      <column name="CreateDate"></column>
+      <generator class="DateTime"></generator>
+    </date>
+    <property name="ConfirmationToken">
+      <column name="ConfirmationToken"></column>
+    </property>
+    <property name="IsConfirmed">
+      <column name="IsConfirmed"></column>
+    </property>
+    <FailureDate name="LastPasswordFailureDate">
+      <column name="LastPasswordFailureDate"></column>
+      <generator class="DateTime"></generator>
+    </FailureDate>
+    <property name="PasswordFailuresSinceLastSuccess">
+      <column name="PasswordFailuresSinceLastSuccess"></column>
+    </property>
+    <property name="Password">
+      <column name="Password"></column>
+    </property>
+    <ChangeDate name="PasswordChangeDate">
+      <column name="PasswordChangeDate"></column>
+      <generator class="DateTime"></generator>
+    </ChangeDate>
+    <property name="PasswordSalt">
+      <column name="PasswordSalt"></column>
+    </property>
+    <property name="PasswordVerificationToken">
+      <column name="PasswordVerificationToken"></column>
+    </property>
+    <property name="PasswordVerificationTokenExpiration">
+      <column name="PasswordVerificationTokenExpiration"></column>
+    </property>
+  </class>
+</hibernate-mapping>
