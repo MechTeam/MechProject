@@ -121,7 +121,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Domain\Entities\Account.cs" />
     <Compile Include="Models\Domain\Entities\StudentGroup.cs" />
+    <Compile Include="Models\Domain\Entities\User.cs" />
     <Compile Include="Models\Domain\Providers\BaseProvider.cs" />
     <Compile Include="Models\Domain\Providers\IProvider.cs" />
     <Compile Include="Models\Domain\Providers\NHibernateHelper.cs" />
@@ -133,6 +135,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Mapping\Account.hbm.xml" />
+    <Content Include="Models\Mapping\User.hbm.xml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

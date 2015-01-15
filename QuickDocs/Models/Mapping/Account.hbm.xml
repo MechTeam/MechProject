@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Membership" table="Membership">
+    <id name="Id" column="ID_USER">
+      <generator class="foreign">
+        <param name="property">User</param>
+      </generator>
+    </id>
+    <one-to-one name="User" class="User" constrained="true" ></one-to-one>
+    <date name="CreateDate">
+      <column name="CreateDate"></column>
+      <generator class="DateTime"></generator>
+    </date>
+    <property name="ConfirmationToken">
+      <column name="ConfirmationToken"></column>
+    </property>
+    <property name="IsConfirmed">
+      <column name="IsConfirmed"></column>
+    </property>
+    <property name="Password">
+      <column name="Password"></column>
+    </property>
+    <many-to-one name="User" column="ID_User" unique="true" lazy="false"
+       class="User" />
+  </class>
+</hibernate-mapping>
