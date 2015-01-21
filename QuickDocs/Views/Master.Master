@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />        
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>        
+    <link href="../Content/MainTheme.css" type="text/css" rel="stylesheet" />    
+</head>
+<body>
+    <div id="headerContainer">
+        <% Html.RenderPartial("~/Views/Block/MainHeader.ascx"); %>
+    </div>
+    <div id="mainContainer">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">        
+        </asp:ContentPlaceHolder>        
+    </div>
+    <div id="footerContainer">  
+        <% Html.RenderPartial("~/Views/Block/Footer.ascx"); %>      
+    </div>
+
+    <script src="../Scripts/jquery-1.11.2.min.js"></script>     
+    <script src="../Scripts/VisualElements.js"></script>
+</body>
+</html>

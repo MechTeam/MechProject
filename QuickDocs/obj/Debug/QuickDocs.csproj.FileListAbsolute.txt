@@ -21,3 +21,32 @@ E:\Мои говнопроекты\MechProject\QuickDocs\obj\Debug\QuickDocs.csp
 E:\Мои говнопроекты\MechProject\QuickDocs\obj\Debug\QuickDocs.dll
 E:\Мои говнопроекты\MechProject\QuickDocs\obj\Debug\QuickDocs.pdb
 E:\Мои говнопроекты\MechProject\QuickDocs\bin\hibernate.cfg.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\hibernate.cfg.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\QuickDocs.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\QuickDocs.pdb
+C:\dev\Git\QuickDocs\QuickDocs\bin\EntityFramework.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\Microsoft.Web.Infrastructure.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\Newtonsoft.Json.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Net.Http.Formatting.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Helpers.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Http.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Http.WebHost.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Mvc.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Razor.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.Deployment.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.Razor.dll
+C:\dev\Git\QuickDocs\QuickDocs\bin\EntityFramework.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\Newtonsoft.Json.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Net.Http.Formatting.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Helpers.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Http.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Http.WebHost.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Mvc.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.Razor.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.Deployment.xml
+C:\dev\Git\QuickDocs\QuickDocs\bin\System.Web.WebPages.Razor.xml
+C:\dev\Git\QuickDocs\QuickDocs\obj\Debug\QuickDocs.dll
+C:\dev\Git\QuickDocs\QuickDocs\obj\Debug\QuickDocs.pdb
+C:\dev\Git\QuickDocs\QuickDocs\obj\Debug\QuickDocs.csprojResolveAssemblyReference.cache
