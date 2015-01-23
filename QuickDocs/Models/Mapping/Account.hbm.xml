@@ -21,5 +21,8 @@
     <property name="CreateDate">
       <column name="CreateData"></column>
     </property>
+    <property name="Login">
+      <column name="Login"></column>
+    </property>
   </class>
 </hibernate-mapping>
