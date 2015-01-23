@@ -126,10 +126,13 @@
     <Compile Include="Models\Domain\Entities\Account.cs" />
     <Compile Include="Models\Domain\Entities\StudentGroup.cs" />
     <Compile Include="Models\Domain\Entities\User.cs" />
+    <Compile Include="Models\Domain\Filters\AuthenticationFilter.cs" />
+    <Compile Include="Models\Domain\Providers\AccountProvider.cs" />
     <Compile Include="Models\Domain\Providers\BaseProvider.cs" />
     <Compile Include="Models\Domain\Providers\IProvider.cs" />
     <Compile Include="Models\Domain\Providers\NHibernateHelper.cs" />
     <Compile Include="Models\Domain\Providers\StudentGroupProvider.cs" />
+    <Compile Include="Models\Domain\Providers\UserProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
