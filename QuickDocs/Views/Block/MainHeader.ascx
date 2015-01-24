@@ -1,17 +1,13 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>" %>
 
 <% using(Html.BeginForm()) { %>
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <h1>
-                        QUICK DOCS
-                    </h1>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <div id="headerBlock">
+        <div id="headerLabel">
+            <h1>
+                QUICK DOCS
+            </h1>
+        </div>
+    </div>    
 <% } %>
 
 

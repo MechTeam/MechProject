@@ -9,18 +9,21 @@
     <link href="../Content/MainTheme.css" type="text/css" rel="stylesheet" />    
 </head>
 <body>
-    <div id="headerContainer">
-        <% Html.RenderPartial("~/Views/Block/MainHeader.ascx"); %>
-    </div>
-    <div id="mainContainer">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">        
-        </asp:ContentPlaceHolder>        
-    </div>
-    <div id="footerContainer">  
-        <% Html.RenderPartial("~/Views/Block/Footer.ascx"); %>      
+    <div id="pageContainer">
+        <div id="headerContainer">
+            <% Html.RenderPartial("~/Views/Block/MainHeader.ascx"); %>
+        </div>
+        <div id="mainContainer">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">        
+            </asp:ContentPlaceHolder>        
+        </div>
+        <div id="footerContainer">  
+            <% Html.RenderPartial("~/Views/Block/Footer.ascx"); %>      
+        </div>
     </div>
 
     <script src="../Scripts/jquery-1.11.2.min.js"></script>     
     <script src="../Scripts/VisualElements.js"></script>
+    <script type="text/javascript" src="../../Scripts/AuthScript.js"></script>    
 </body>
 </html>

@@ -120,9 +120,11 @@
   <ItemGroup>
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BlockController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
     <Compile Include="Models\Domain\Entities\StudentGroup.cs" />
     <Compile Include="Models\Domain\Entities\User.cs" />
@@ -143,6 +145,7 @@
     <Content Include="Global.asax" />
     <Content Include="Models\Mapping\Account.hbm.xml" />
     <Content Include="Models\Mapping\User.hbm.xml" />
+    <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
@@ -159,6 +162,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
