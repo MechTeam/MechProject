@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
+    <Compile Include="Models\Domain\Entities\Role.cs" />
     <Compile Include="Models\Domain\Entities\StudentGroup.cs" />
     <Compile Include="Models\Domain\Entities\User.cs" />
     <Compile Include="Models\Domain\Filters\AuthenticationFilter.cs" />
@@ -144,6 +145,7 @@
     <Content Include="Content\MainTheme.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\Mapping\Account.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
     <Content Include="Models\Mapping\User.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
