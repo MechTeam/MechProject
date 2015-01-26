@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Teacher" table="Teacher">
+    <id name="ID">
+      <column name="ID"></column>
+      <generator class="guid"></generator>
+    </id>
+    <property name="Post">
+      <column name="Post"></column>  
+    </property>
+    <property name="Part">
+      <column name="Part"></column>
+    </property>
+  </class>
+</hibernate-mapping>
