@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Control" table="Control">
+    <id name="ID">
+      <column name="Id"></column>
+      <generator class="guid"></generator>
+    </id>
+  <property name="Name">
+    <column name="Name"></column>
+  </property>
+    <property name="MaxPoints">
+      <column name="MaxPoints"></column>
+    </property>
+    <property name="MinPoints">
+      <column name="MinPoints"></column>
+    </property>
+    <property name="ID_ControlType">
+      <column name="ID_ControlType"></column>
+    </property>
+    <property name="ID_Discipline">
+      <column name="ID_Discipline"></column>
+    </property>
+    <property name="ModuleNum">
+      <column name="ModuleNum"></column>
+    </property>
+    <property name="NumControl">
+      <column name="NumControl"></column>
+    </property>
+    <property name="Week">
+      <column name="Week"></column>
+    </property>
+    </class>
+</hibernate-mapping>
