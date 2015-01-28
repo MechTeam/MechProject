@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Teacher" table="Teacher">
+    <id name="ID" column="ID_USER">
+      <generator class="foreign">
+        <param name="property">User</param>
+      </generator>
+    </id>
+    <one-to-one name="User" class="User" constrained="true" ></one-to-one>
+    <property name="Post">
+      <column name="Post"></column>  
+    </property>
+    <property name="Part">
+      <column name="Part"></column>
+    </property>
+  </class>
+</hibernate-mapping>
