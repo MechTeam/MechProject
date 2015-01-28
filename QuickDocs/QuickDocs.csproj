@@ -126,7 +126,16 @@
     </Compile>
     <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
+    <Compile Include="Models\Domain\Entities\Discipline.cs" />
+    <Compile Include="Models\Domain\Entities\Lesson.cs" />
+    <Compile Include="Models\Domain\Entities\LessonNum.cs" />
+    <Compile Include="Models\Domain\Entities\LessonType.cs" />
+    <Compile Include="Models\Domain\Entities\Student.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Domain\Entities\StudentGroup.cs" />
+    <Compile Include="Models\Domain\Entities\StudentInLesson.cs" />
+    <Compile Include="Models\Domain\Entities\Teacher.cs" />
     <Compile Include="Models\Domain\Entities\User.cs" />
     <Compile Include="Models\Domain\Filters\AuthenticationFilter.cs" />
     <Compile Include="Models\Domain\Providers\AccountProvider.cs" />
@@ -143,8 +152,15 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\MainTheme.css" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Mapping\Account.hbm.xml" />
-    <Content Include="Models\Mapping\User.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Account.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Discipline.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\LessonNum.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\LessonType.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Lesson.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Student.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\StudentInLesson.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />
