@@ -1,30 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
-  <class name="Schedule" table="Schedule">
+  <class name="Lesson" table="Schedule">
     <id name="ID">
       <column name="ID"></column>
       <generator class="guid"></generator>
     </id>
-    <id name="ID_Discipline">
-      <column name="ID_Discipline"></column>
-      <generator class="guid"></generator>
-    </id>
-    <id name="ID_GroupStud">
-      <column name="ID_GroupStud"></column>
-      <generator class="guid"></generator>
-    </id>
-    <id name="ID_Teacher">
-      <column name="ID_Teacher"></column>
-      <generator class="guid"></generator>
-    </id>
-    <id name="ID_LessonType">
-      <column name="ID_LessonType"></column>
-      <generator class="guid"></generator>
-    </id>
-    <id name="ID_LessonNum">
-      <column name="ID_LessonNum"></column>
-      <generator class="guid"></generator>
-    </id>
+    <many-to-one name="Group" column="ID_GroupStud" class="StudentGroup"/>
+    <many-to-one name="Discipline" column="ID_Discipline" class="Discipline"/>
+    <many-to-one name="Teacher" column="ID_Teacher" class="Teacher"/>
+    <many-to-one name="LessonType" column="ID_LessonType" class="LessonType"/>
+    <many-to-one name="LessonNum" column="ID_LessonNum" class="LessonNum"/>
     <property name="LectureRoom">
       <column name="LectureRoom"></column>
     </property>
