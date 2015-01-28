@@ -8,5 +8,9 @@
     <property name="Name">
       <column name="Name"></column>
     </property>
+    <bag table="UserInRole" name="Users" lazy="false">
+      <key column="Role_ID"/>
+      <many-to-many class="User" column="User_ID"/>
+    </bag>
   </class>
 </hibernate-mapping>
