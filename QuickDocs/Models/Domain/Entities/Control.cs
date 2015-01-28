@@ -11,8 +11,8 @@ namespace QuickDocs.Models.Domain.Entities
         public virtual string Name { get; set; }
         public virtual int MaxPoints { get; set; }
         public virtual int MinPoints { get; set; }
-        public virtual Guid ID_ControlType { get; set; }
-        public virtual Guid ID_Discipline { get; set; }
+        public virtual ControlType ControlType { get; set; }
+        public virtual Discipline Discipline { get; set; }
         public virtual int ModuleNum { get; set; }
         public virtual int NumControl { get; set; }
         public virtual int Week { get; set; }

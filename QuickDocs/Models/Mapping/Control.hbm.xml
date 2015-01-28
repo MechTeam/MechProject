@@ -14,12 +14,6 @@
     <property name="MinPoints">
       <column name="MinPoints"></column>
     </property>
-    <property name="ID_ControlType">
-      <column name="ID_ControlType"></column>
-    </property>
-    <property name="ID_Discipline">
-      <column name="ID_Discipline"></column>
-    </property>
     <property name="ModuleNum">
       <column name="ModuleNum"></column>
     </property>
@@ -29,5 +23,7 @@
     <property name="Week">
       <column name="Week"></column>
     </property>
+    <many-to-one name="ControlType" column="ID_ControlType" class="ControlType" />
+    <many-to-one name="Discipline" column="ID_Discipline" class="Discipline" />
     </class>
 </hibernate-mapping>
