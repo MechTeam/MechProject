@@ -7,7 +7,7 @@ namespace QuickDocs.Models.Domain.Entities
 {
     public class LessonNum
     {
-        public virtual Guid id { get; protected set; }
+        public virtual int ID { get; protected set; }
         public virtual DateTime StartTime { get; set; }
         public virtual DateTime FinishTime { get; set; }
     }

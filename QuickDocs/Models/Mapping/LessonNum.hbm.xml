@@ -3,7 +3,7 @@
    <class name="LessonNum" table="LessonNum">
       <id name="ID">
       <column name="Id"></column>
-      <generator class="guid"></generator>
+      <generator class="identity"></generator>
     </id>
     <property name="StartTime">
       <column name="StartTime"></column>
