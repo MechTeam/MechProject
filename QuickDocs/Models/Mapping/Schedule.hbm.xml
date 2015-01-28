@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="Lesson" table="Schedule">
+    <id name="ID">
+      <column name="ID"></column>
+      <generator class="guid"></generator>
+    </id>
+    <many-to-one name="Group" column="ID_GroupStud" class="StudentGroup"/>
+    <many-to-one name="Discipline" column="ID_Discipline" class="Discipline"/>
+    <many-to-one name="Teacher" column="ID_Teacher" class="Teacher"/>
+    <many-to-one name="LessonType" column="ID_LessonType" class="LessonType"/>
+    <many-to-one name="LessonNum" column="ID_LessonNum" class="LessonNum"/>
+    <property name="LectureRoom">
+      <column name="LectureRoom"></column>
+    </property>
+  </class>
+</hibernate-mapping>
