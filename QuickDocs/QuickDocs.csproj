@@ -130,6 +130,7 @@
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
     <Compile Include="Models\Domain\Entities\LessonType.cs" />
+    <Compile Include="Models\Domain\Entities\Role.cs" />
     <Compile Include="Models\Domain\Entities\Student.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -161,6 +162,7 @@
     <EmbeddedResource Include="Models\Mapping\StudentInLesson.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />

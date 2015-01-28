@@ -14,5 +14,9 @@
     <property name="Email">
       <column name="Email"></column>
     </property>
+    <bag table="UserInRole" name="Roles" lazy="false">
+      <key column="User_ID"/>
+      <many-to-many class="Role" column="Role_ID"/>
+    </bag>
   </class>
 </hibernate-mapping>
