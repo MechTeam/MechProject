@@ -41,19 +41,35 @@ namespace QuickDocs.Models.Domain.Providers
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {
-
+                    session.Delete("delete * from " + typeof(T).Name);
+                    transaction.Commit();
                 }
             }
         }
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    session.Update(entity);
+                    transaction.Commit();
+                }
+            }
         }
 
         public T GetByID(Guid id)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    var entity = session.CreateCriteria(typeof(T))
+                        .Add(Expression.Eq("ID", id)).List<T>().FirstOrDefault();
+                    return entity;
+                }
+            }
         }
 
         public IList<T> GetList()
