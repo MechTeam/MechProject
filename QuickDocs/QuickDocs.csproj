@@ -130,7 +130,6 @@
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
-    <Compile Include="Models\Domain\Entities\Control.cs" />
     <Compile Include="Models\Domain\Entities\Discipline.cs" />
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
@@ -148,6 +147,7 @@
     <Compile Include="Models\Domain\Providers\BaseProvider.cs" />
     <Compile Include="Models\Domain\Providers\IProvider.cs" />
     <Compile Include="Models\Domain\Providers\NHibernateHelper.cs" />
+    <Compile Include="Models\Domain\Providers\RoleProvider.cs" />
     <Compile Include="Models\Domain\Providers\StudentGroupProvider.cs" />
     <Compile Include="Models\Domain\Providers\UserProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

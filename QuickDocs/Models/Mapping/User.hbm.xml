@@ -11,6 +11,9 @@
     <property name="SecondName">
       <column name="SecondName"></column>
     </property>
+    <property name="Surname">
+      <column name="Surname"></column>
+    </property>
     <property name="Email">
       <column name="Email"></column>
     </property>
