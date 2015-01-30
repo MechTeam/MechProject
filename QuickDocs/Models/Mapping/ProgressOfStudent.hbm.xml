@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickDocs" namespace="QuickDocs.Models.Domain.Entities">
+  <class name="ProgressOfStudent" table="ProgressOfStudent">
+    <many-to-one name="StudentInLesson" column="ID_StudentInLesson" class="Lesson" />
+    <many-to-one name="Control" column="ID_Control" class="Control"/>
+  </class>
+  <property name="Points">
+    <column name="Points"></column>
+  </property>
+  <property name="Date">
+    <column name="Date"></column>
+  </property>
+</hibernate-mapping>
