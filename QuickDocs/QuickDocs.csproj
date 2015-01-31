@@ -171,7 +171,9 @@
     <EmbeddedResource Include="Models\Mapping\Student.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\StudentInLesson.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
-    <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
