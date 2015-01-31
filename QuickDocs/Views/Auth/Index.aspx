@@ -39,12 +39,10 @@
                         <input class="flat" type="submit" value="Регистрация" />                                
                     </td>
                     <td>
-                        <input class="flat" type="submit" value="Войти" />        
+                        <input class="flat" type="button" value="Войти" onclick="location.href='<%= Url.Action("Index", "Admin") %>'" />        
                     </td>                   
                 </tr>
             </table>
-            
-            
         </div>
     <% } %>
 </asp:Content>

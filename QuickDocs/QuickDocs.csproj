@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Logic\WebTemplateObject\StudentWTO.cs" />
+    <Compile Include="Logic\WebTemplateObject\SuperAdminWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
@@ -182,6 +183,7 @@
     <Content Include="Models\Mapping\ControlType.hbm.xml" />
     <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
+    <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
