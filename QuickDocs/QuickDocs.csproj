@@ -130,10 +130,13 @@
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
+    <Compile Include="Models\Domain\Entities\Control.cs" />
+    <Compile Include="Models\Domain\Entities\ControlType.cs" />
     <Compile Include="Models\Domain\Entities\Discipline.cs" />
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
     <Compile Include="Models\Domain\Entities\LessonType.cs" />
+    <Compile Include="Models\Domain\Entities\ProgressOfStudent.cs" />
     <Compile Include="Models\Domain\Entities\Role.cs" />
     <Compile Include="Models\Domain\Entities\Student.cs">
       <SubType>Code</SubType>
@@ -175,13 +178,18 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
+    <Content Include="Models\Mapping\Control.hbm.xml" />
+    <Content Include="Models\Mapping\ControlType.hbm.xml" />
+    <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
     <Content Include="Views\Block\Footer.ascx" />
     <Content Include="Views\Block\MainHeader.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

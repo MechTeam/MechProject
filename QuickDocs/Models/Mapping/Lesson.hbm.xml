@@ -5,7 +5,7 @@
       <column name="ID"></column>
       <generator class="guid"></generator>
     </id>
-    <many-to-one name="Group" column="ID_GroupStud" class="StudentGroup"/>
+    <many-to-one name="StudentGroup" column="ID_GroupStud" class="StudentGroup"/>
     <many-to-one name="Discipline" column="ID_Discipline" class="Discipline"/>
     <many-to-one name="Teacher" column="ID_Teacher" class="Teacher"/>
     <many-to-one name="LessonType" column="ID_LessonType" class="LessonType"/>
