@@ -11,7 +11,6 @@ namespace QuickDocs.Models.Domain.Providers
         public new void Add(Student student)
         {
             UserProvider userProvider = new UserProvider();
-            StudentProvider studentProvider = new StudentProvider();
             RoleProvider roleProvider = new RoleProvider();
 
             if (student.User == null)
@@ -19,17 +18,12 @@ namespace QuickDocs.Models.Domain.Providers
                 throw new Exception(String.Format("Поля не заполнены!"));
             }
 
-            if (userProvider.GetByID(student.ID) == null)
-            {
-                userProvider.Add(student.User);
-            }
+            Role role = roleProvider.GetByName("Student");
+            userProvider.AddUserToRole(student.User, role);
 
             if (GetByID(student.ID) == null)
             {
-                studentProvider.Add(student);
-
-                 Role role = roleProvider.GetByName("Student");
-                 userProvider.AddUserToRole(student.User, role);
+                base.Add(student);
             }
         }
     }
