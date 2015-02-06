@@ -1,6 +1,6 @@
 ﻿
 $(document).ready(function () {
-    $('#loginTxt').keypress(function () {
+    $('#loginTxt').on("keypress keydown",(function () {
         var text = $(this).val();
         $.ajax({
             type: 'POST',
@@ -10,11 +10,11 @@ $(document).ready(function () {
                 $('#loginMessage').text(data.result);                
             }
         });
-    });
+    }));
 });
 
 $(document).ready(function () {
-    $('#passwordTxt').keypress(function () {        
+    $('#passwordTxt').on("keypress keydown",(function () {        
         var text = $(this).val();
         $.ajax({
             type: 'POST',
@@ -25,7 +25,7 @@ $(document).ready(function () {
             }
         });
 
-    });
+    }));
 });
 
 
