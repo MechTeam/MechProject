@@ -65,7 +65,7 @@ input[type="submit"].flat  {
     background-color: #6496c8;
     text-shadow: -1px 1px #417cb8;
     border: none;
-    width: 100px;
+    width: 125px;
     height: 25px;   
     font-size: 14px;
 }
@@ -80,22 +80,3 @@ table.userInput {
     margin-left: 300px;
     margin-right: 200px;
 }
-
-/*
-  <table style="width: 500px; margin-left: 300px; margin-right: 200px;">
-                <tr>
-                    <td style="width: 150px;">
-                        <p>Логин:</p>
-                    </td>
-                    <td style="width: 150px;">
-                        <input id="loginTxt" name="Login" class="txt" type="text" />                        
-                    </td>
-                    <td style="width: 200px;">
-                        <p id="loginMessage" class="Message"></p>
-                    </td>
-                </tr>
-   </table>    
-*/
-
-
-

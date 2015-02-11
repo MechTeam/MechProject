@@ -6,7 +6,7 @@ using QuickDocs.Models.Domain.Entities;
 
 namespace QuickDocs.Logic.WebTemplateObject
 {
-    public abstract class UserWTO
+    public class UserWTO
     {
         string name;
         string surname;
@@ -23,7 +23,6 @@ namespace QuickDocs.Logic.WebTemplateObject
 
         private IList<string> getRolesName(IList<Role> roles)
         {
-
             return roles.Select(x => x.Name).ToList();
         }
 

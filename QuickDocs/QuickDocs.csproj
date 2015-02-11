@@ -120,7 +120,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Controllers\BlockController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -131,13 +131,10 @@
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
-    <Compile Include="Models\Domain\Entities\Control.cs" />
-    <Compile Include="Models\Domain\Entities\ControlType.cs" />
     <Compile Include="Models\Domain\Entities\Discipline.cs" />
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
     <Compile Include="Models\Domain\Entities\LessonType.cs" />
-    <Compile Include="Models\Domain\Entities\ProgressOfStudent.cs" />
     <Compile Include="Models\Domain\Entities\Role.cs" />
     <Compile Include="Models\Domain\Entities\Student.cs">
       <SubType>Code</SubType>
@@ -160,7 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="App_Data\InsertInto.sql" />
+    <Content Include="App_Data\InsertIntoUserAndAccount.sql" />
     <Content Include="App_Data\quickDocsDB.mdf" />
     <Content Include="App_Data\quickDocsDB_log.ldf">
       <DependentUpon>quickDocsDB.mdf</DependentUpon>
@@ -175,23 +172,19 @@
     <EmbeddedResource Include="Models\Mapping\Student.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\StudentInLesson.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
-    <EmbeddedResource Include="Models\Mapping\User.hbm.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
-    <Content Include="Models\Mapping\Control.hbm.xml" />
-    <Content Include="Models\Mapping\ControlType.hbm.xml" />
-    <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
+    <Content Include="Views\Admin\AdminPanel.ascx" />
     <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Admin\UserList.ascx" />
     <Content Include="Views\Auth\Index.aspx" />
     <Content Include="Scripts\VisualElements.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
     <Content Include="Views\Block\Footer.ascx" />
     <Content Include="Views\Block\MainHeader.ascx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Views\Error\Error.aspx" />
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
