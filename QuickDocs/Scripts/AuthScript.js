@@ -7,7 +7,11 @@ $(document).ready(function () {
             url: '/Auth/LoginValidation',
             data: { input: text },            
             success: function (data) {
-                $('#loginMessage').text(data.result);                
+                $('#loginMessage').text(data.result);
+                if (data.result == "OK")
+                    $("#loginTxt").css({ "border-color": "#00FF00", "background": "#00FF00" });
+                else
+                    $("#loginTxt").css({ "border-color": "#FF0000", "background": "#FF0000" });
             }
         });
     }));
@@ -22,6 +26,10 @@ $(document).ready(function () {
             data: { input: text },
             success: function (data) {                
                 $('#passwordMessage').text(data.result);
+                if (data.result == "OK")
+                    $("#passwordTxt").css({ "border-color": "#00FF00", "background": "#00FF00" });
+                else
+                    $("#passwordTxt").css({ "border-color": "#FF0000", "background": "#FF0000" });
             }
         });
 
