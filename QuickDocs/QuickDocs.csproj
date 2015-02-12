@@ -159,7 +159,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="App_Data\InsertIntoUserAndAccount.sql" />
+    <Content Include="App_Data\InsertInto.sql" />
     <Content Include="App_Data\quickDocsDB.mdf" />
     <Content Include="App_Data\quickDocsDB_log.ldf">
       <DependentUpon>quickDocsDB.mdf</DependentUpon>
