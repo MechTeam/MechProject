@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Logic\WebTemplateObject\ControlWTO.cs" />
+    <Compile Include="Logic\WebTemplateObject\StudentControlWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\StudentWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
