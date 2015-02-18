@@ -6,17 +6,12 @@ using System.Web.Mvc;
 
 namespace QuickDocs.Controllers
 {
-    public class BlockController : Controller
+    public class ErrorController : Controller
     {
         //
-        // GET: /Header/
+        // GET: /Error/
 
-        public ActionResult Header()
-        {
-            return View();
-        }
-
-        public ViewResult Footer()
+        public ActionResult Error()
         {
             return View();
         }

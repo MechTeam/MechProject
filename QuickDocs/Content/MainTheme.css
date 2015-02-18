@@ -4,17 +4,16 @@ html, body {
     height: 100%;
     text-align: center;    
     margin: 0 auto;    
+    font-family: Verdana;    
 }
 
-#pageContainer {
-    
-}
 
 #headerContainer {        
     margin: 0 auto;    
     height: 60px;    
-    background-color: #6496c8;   
+    background-color: #6496c8;
     text-align: center;
+    border: solid;
 }
 
 #headerBlock {    
@@ -25,12 +24,13 @@ h1 {
     font-size: 22px;        
     text-shadow: -1px 1px #417cb8;
     color: #fff;    
-    margin: 5px 0px 5px 0px;    
-    font-family: Verdana;    
+    margin: 5px 0px 5px 0px;        
 }
+
 
 #mainContainer {
     height: 820px;
+    border: solid;
 }
 
 #footerContainer {       
@@ -38,6 +38,8 @@ h1 {
     text-align: center;    
     background-color: #6496c8;
     height: 50px;
+    border: solid;
+    position: relative;
 }
 
 #footerCopyright {
@@ -48,54 +50,78 @@ h1 {
     padding-top: 10px;   
 }
 
+.inputBlock {
+    border: solid;
+    text-align: center;
+    width: inherit;
+    float: left;
+}
 
+.labelContainer {
+    width: 150px;
+    margin: 0 auto;
+    font-family: Verdana;
+    font-size: 14px;    
+}
 
-/*Элементы*/
-table {
+.textContainer {
+    width: 150px;
     margin: 0 auto;
 }
 
+.messageContainer {    
+    width: 200px;
+    margin: 0 auto;
+}
+
+.buttonContainer {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.userElementRow {
+    width: inherit;    
+    margin: 5px;        
+}
+
+#adminPanelContainer {    
+    border: solid;
+    width: inherit;
+    text-align: left;
+}
+
+#showType {
+    margin-left: 5px;
+    height: 25px;
+}
+
 input[type="text"].txt {
-    width: 120px;
+    width: inherit;
     height: 20px;        
 }
 
-input[type="submit"].flat  {
+.flatActionLink {
     color: #fff;
     background-color: #6496c8;
     text-shadow: -1px 1px #417cb8;
     border: none;
-    width: 100px;
+    width: 150px;
+    font-style: normal;
+    height: 25px;   
+    font-size: 14px;
+    text-decoration: none;
+}
+
+input[type="submit"], input[type="button"].flat  {
+    color: #fff;
+    background-color: #6496c8;
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+    width: inherit;
     height: 25px;   
     font-size: 14px;
 }
 
-p {
-    font-family: Verdana;
-    font-size: 14px;
+.userElementRow div {
+    float: left;
 }
-
-table.userInput {
-    width: 500px;
-    margin-left: 300px;
-    margin-right: 200px;
-}
-
-/*
-  <table style="width: 500px; margin-left: 300px; margin-right: 200px;">
-                <tr>
-                    <td style="width: 150px;">
-                        <p>Логин:</p>
-                    </td>
-                    <td style="width: 150px;">
-                        <input id="loginTxt" name="Login" class="txt" type="text" />                        
-                    </td>
-                    <td style="width: 200px;">
-                        <p id="loginMessage" class="Message"></p>
-                    </td>
-                </tr>
-   </table>    
-*/
-
-
-
