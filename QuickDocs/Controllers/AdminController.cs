@@ -32,6 +32,7 @@ namespace QuickDocs.Controllers
             try
             {
                 UserProvider provider = new UserProvider();
+                var us = provider.GetList();
                 IList<UserWTO> users = new List<UserWTO>();
 
                 foreach (User user in provider.GetList())
@@ -48,5 +49,25 @@ namespace QuickDocs.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public ViewResult DeleteUser(Guid id)
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult DetailsUser(Guid id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult EditUser(Guid id)
+        {
+            return View();
+        }
+
+
     }
 }

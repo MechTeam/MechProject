@@ -11,7 +11,7 @@
     <% Html.RenderAction("AdminPanel"); %>
 </div>
     
-<div id="studentContainer">
+<div id="userContainer">
     <% Html.RenderAction("UserList"); %>
 </div>
 

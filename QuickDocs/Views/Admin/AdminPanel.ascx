@@ -1,24 +1,14 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<QuickDocs.Logic.WebTemplateObject.SuperAdminWTO>" %>
 
 <% using(Html.BeginForm()) { %>
-    
-    <div id="AdminInfo">
-    </div>
-    <div id="AdminControls" style="width: 820px;">
-        <div>
-            <input type="submit" id="showAll" class="flat" value="Все" />
-        </div>
-        <div>
-            <input type="submit" id="showStudents" class="flat" value="Студенты" />
-        </div>
-        <div>
-            <input type="submit" id="showTeachers" class="flat" value="Преподователи" />
-        </div>
-        <div>
-            <input type="submit" id="showAdmins" class="flat" value="Администраторы" />
-        </div>
-    </div>
-    
 
+    <div id="selectControl" style="width: 820px;">
+        <select id="showType">
+            <option value="1">Все</option>
+            <option value="2">Студенты</option>
+            <option value="3">Преподователи</option>
+            <option value="4">Администраторы</option>
+        </select>        
+    </div>
 <% } %>
 
