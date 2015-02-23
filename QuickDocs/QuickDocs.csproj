@@ -200,7 +200,9 @@
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="Content\MainTheme.css" />
     <Content Include="Global.asax" />
-    <EmbeddedResource Include="Models\Mapping\Account.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Account.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\Mapping\Discipline.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\LessonNum.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\LessonType.hbm.xml" />
