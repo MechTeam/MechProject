@@ -26,5 +26,11 @@ namespace QuickDocs.Models.Domain.Providers
                 base.Add(student);
             }
         }
+
+        public new void Delete(Guid id)
+        { 
+            base.Delete(id);
+            (new UserProvider()).Delete(id);
+        }
     }
 }
