@@ -131,10 +131,13 @@
     <Compile Include="Logic\WebTemplateObject\TeacherWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\UserWTO.cs" />
     <Compile Include="Models\Domain\Entities\Account.cs" />
+    <Compile Include="Models\Domain\Entities\Control.cs" />
+    <Compile Include="Models\Domain\Entities\ControlType.cs" />
     <Compile Include="Models\Domain\Entities\Discipline.cs" />
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
     <Compile Include="Models\Domain\Entities\LessonType.cs" />
+    <Compile Include="Models\Domain\Entities\ProgressOfStudent.cs" />
     <Compile Include="Models\Domain\Entities\Role.cs" />
     <Compile Include="Models\Domain\Entities\Student.cs">
       <SubType>Code</SubType>
@@ -146,11 +149,20 @@
     <Compile Include="Models\Domain\Filters\AuthenticationFilter.cs" />
     <Compile Include="Models\Domain\Providers\AccountProvider.cs" />
     <Compile Include="Models\Domain\Providers\BaseProvider.cs" />
+    <Compile Include="Models\Domain\Providers\DisciplineProvider.cs" />
     <Compile Include="Models\Domain\Providers\IProvider.cs" />
+    <Compile Include="Models\Domain\Providers\LessonProvider.cs" />
+    <Compile Include="Models\Domain\Providers\LessonTypeProvider.cs" />
     <Compile Include="Models\Domain\Providers\NHibernateHelper.cs" />
     <Compile Include="Models\Domain\Providers\RoleProvider.cs" />
     <Compile Include="Models\Domain\Providers\StudentGroupProvider.cs" />
+    <Compile Include="Models\Domain\Providers\StudentInLessonProvider.cs" />
+    <Compile Include="Models\Domain\Providers\StudentProvider.cs" />
+    <Compile Include="Models\Domain\Providers\TeacherProvider.cs" />
     <Compile Include="Models\Domain\Providers\UserProvider.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +174,30 @@
     <Content Include="App_Data\quickDocsDB_log.ldf">
       <DependentUpon>quickDocsDB.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Iesi.Collections.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\NHibernate.dll" />
+    <Content Include="bin\QuickDocs.dll" />
+    <Content Include="bin\QuickDocs.pdb" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="Content\MainTheme.css" />
     <Content Include="Global.asax" />
     <EmbeddedResource Include="Models\Mapping\Account.hbm.xml" />
@@ -174,6 +210,9 @@
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
+    <Content Include="Models\Mapping\Control.hbm.xml" />
+    <Content Include="Models\Mapping\ControlType.hbm.xml" />
+    <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Admin\AdminPanel.ascx" />
     <Content Include="Views\Admin\Index.aspx" />

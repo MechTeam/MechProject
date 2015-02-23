@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using QuickDocs.Models.Domain.Entities;
+using NHibernate;
+using NHibernate.Criterion;
 
 namespace QuickDocs.Models.Domain.Providers
 {
@@ -37,6 +39,32 @@ namespace QuickDocs.Models.Domain.Providers
             { 
                 user.Roles.Add(role);
                 this.Add(user);
+            }
+        }
+
+        public new void Delete(Guid id)
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    StudentProvider sProvider = new StudentProvider();
+                    if (sProvider.GetByID(id) != null)
+                    {
+                        sProvider.Delete(id);
+                    }
+                    TeacherProvider tProvider = new TeacherProvider();
+                    if (tProvider.GetByID(id) != null)
+                    {
+                        tProvider.Delete(id);
+                    }
+                    AccountProvider aProvider = new AccountProvider();
+                    if (aProvider.GetByID(id) != null)
+                    {
+                        aProvider.Delete(id);
+                    }
+                    base.Delete(id);
+                }
             }
         }
     }
