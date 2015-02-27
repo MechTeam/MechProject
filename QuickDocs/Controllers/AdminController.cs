@@ -42,7 +42,7 @@ namespace QuickDocs.Controllers
 
                 return View(users);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 RedirectToAction("Error");
             }

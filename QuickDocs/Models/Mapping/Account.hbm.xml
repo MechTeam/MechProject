@@ -24,8 +24,5 @@
     <property name="Login">
       <column name="Login"></column>
     </property>
-  <property name="Account">
-      <column name="Account"></column>
-    </property>
   </class>
 </hibernate-mapping>

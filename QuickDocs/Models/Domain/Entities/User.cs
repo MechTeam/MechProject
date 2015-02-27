@@ -13,7 +13,6 @@ namespace QuickDocs.Models.Domain.Entities
         public virtual string Surname { get; set; }
         public virtual string Email { get; set; }
         public virtual IList<Role> Roles { get; set; }
-        public virtual string Account { get; set; }
         public User()
         {
             Roles = new List<Role>();
