@@ -8,7 +8,10 @@
             <option value="2">Студенты</option>
             <option value="3">Преподователи</option>
             <option value="4">Администраторы</option>
-        </select>        
+        </select>
+    </div>
+    <div>
+        <%= Html.ActionLink("Добавить админимстратора", "AddAdmin") %>        
     </div>
 <% } %>
 

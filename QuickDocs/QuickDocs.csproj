@@ -125,6 +125,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Helpers\UserFacade.cs" />
     <Compile Include="Logic\Helpers\MessageHelper.cs" />
     <Compile Include="Logic\WebTemplateObject\ControlWTO.cs" />
     <Compile Include="Logic\WebTemplateObject\StudentWTO.cs" />
@@ -217,6 +218,7 @@
     <Content Include="Models\Mapping\ControlType.hbm.xml" />
     <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
+    <Content Include="Views\Admin\AddAdmin.ascx" />
     <Content Include="Views\Admin\AdminPanel.ascx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Admin\UserList.ascx" />

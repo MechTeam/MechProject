@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using QuickDocs.Models.Domain.Entities;
 using QuickDocs.Models.Domain.Providers;
 using QuickDocs.Logic.WebTemplateObject;
+using QuickDocs.Logic.Helpers;
 
 namespace QuickDocs.Controllers
 {
@@ -68,6 +69,25 @@ namespace QuickDocs.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult AddAdmin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public RedirectToRouteResult AddAdmins(UserWTO admin)
+        {
+            try
+            {
+                new UserProvider().Add(UserFacade.getUser(admin));
+            }
+            catch (Exception ex)
+            {
+                RedirectToAction("Error");
+            }
+            return RedirectToAction("Index");
+        }
 
     }
 }

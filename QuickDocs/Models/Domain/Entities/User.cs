@@ -9,7 +9,7 @@ namespace QuickDocs.Models.Domain.Entities
     {
         public virtual Guid ID { get; protected set; }
         public virtual string SecondName { get; set; }
-        public virtual string FirstName { get; set; }
+        public virtual string Name { get; set; }
         public virtual string Surname { get; set; }
         public virtual string Email { get; set; }
         public virtual IList<Role> Roles { get; set; }

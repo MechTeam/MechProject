@@ -12,15 +12,22 @@ namespace QuickDocs.Logic.WebTemplateObject
         string name;
         string surname;
         string secondName;
+        string email;
         IList<string> roles;        
         
         public UserWTO(User user)
         {
             id = user.ID;
-            name = user.FirstName;
+            name = user.Name;
             surname = user.Surname;
             secondName = user.SecondName;
+            email = user.Email;
             roles = getRolesName(user.Roles);
+        }
+
+        public UserWTO()
+        {
+            // TODO: Complete member initialization
         }
 
         public string getRolesInString()
@@ -56,6 +63,11 @@ namespace QuickDocs.Logic.WebTemplateObject
         public Guid Id
         {
             get { return id; }
+        }
+
+        public string Email
+        {
+            get { return email; }
         }
     }
 }
