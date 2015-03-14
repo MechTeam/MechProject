@@ -76,7 +76,7 @@ namespace QuickDocs.Controllers
         }
 
         [HttpPost]
-        public RedirectToRouteResult AddAdmins(UserWTO admin)
+        public RedirectToRouteResult AddAdmin(UserWTO admin)
         {
             try
             {
