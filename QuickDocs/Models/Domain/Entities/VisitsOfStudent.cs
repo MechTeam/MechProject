@@ -5,12 +5,11 @@ using System.Web;
 
 namespace QuickDocs.Models.Domain.Entities
 {
-    public class ProgressOfStudent
+    public class VisitsOfStudent
     {
-        public virtual Guid ID { get; set; }
+        public virtual Guid ID { get; protected set; }
         public virtual StudentInLesson StudentInLesson { get; set; }
-        public virtual Control Control { get; set; }
-        public virtual int Points { get; set; }
+        public virtual bool Visit { get; set; }
         public virtual DateTime Date { get; set; }
     }
 }

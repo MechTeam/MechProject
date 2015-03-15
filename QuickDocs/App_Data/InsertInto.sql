@@ -21,7 +21,7 @@
 
 
 
---While @index<6
+--While @index<100
 --Begin
 --	SET @uid  = newid()
 --	Set @indexStr = CONVERT(varchar(5), @index)
@@ -33,7 +33,7 @@
 --	Set @index=@index+1
 --end
 
---While @index<12
+--While @index<1000
 --Begin
 --	SET @uid  = newid()
 --	Set @indexStr = CONVERT(varchar(5), @index)
@@ -44,7 +44,7 @@
 --	insert into UserInRole select [Role].ID as [Role_ID], @uid as [User_ID] from [Role] where [Role].Name='Student'
 --	Set @index=@index+1
 --end
-select * from Student
+select * from Teacher
 --delete from Account
 --delete from UserInRole
 --delete from Role

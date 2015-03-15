@@ -134,6 +134,7 @@
     <Compile Include="Models\Domain\Entities\Account.cs" />
     <Compile Include="Models\Domain\Entities\Control.cs" />
     <Compile Include="Models\Domain\Entities\ControlType.cs" />
+    <Compile Include="Models\Domain\Entities\VisitsOfStudent.cs" />
     <Compile Include="Models\Domain\Entities\Discipline.cs" />
     <Compile Include="Models\Domain\Entities\Lesson.cs" />
     <Compile Include="Models\Domain\Entities\LessonNum.cs" />
@@ -170,7 +171,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="App_Data\InsertIntoUserAndAccount.sql" />
     <Content Include="App_Data\quickDocsDB.mdf" />
     <Content Include="App_Data\quickDocsDB_log.ldf">
       <DependentUpon>quickDocsDB.mdf</DependentUpon>
@@ -213,9 +213,10 @@
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
-    <Content Include="Models\Mapping\Control.hbm.xml" />
-    <Content Include="Models\Mapping\ControlType.hbm.xml" />
-    <Content Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Control.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\ControlType.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\VisitsOfStudent.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\ProgressOfStudent.hbm.xml" />
     <Content Include="Scripts\AuthScript.js" />
     <Content Include="Views\Admin\AdminPanel.ascx" />
     <Content Include="Views\Admin\Index.aspx" />
