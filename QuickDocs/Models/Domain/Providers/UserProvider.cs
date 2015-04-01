@@ -71,9 +71,8 @@ namespace QuickDocs.Models.Domain.Providers
         public bool UserIsExsist(string login, string password)
         {
             bool result = false;
-            AccountProvider accountProvider = new AccountProvider();
 
-            if (accountProvider.Search(login).Password == password)
+            if ((new AccountProvider()).Search(login).Password == password)
             {
                 result = true;
             }
