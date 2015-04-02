@@ -40,7 +40,7 @@ namespace QuickDocs.Models.Domain.Providers
                 using (ITransaction transaction = session.BeginTransaction())
                 {
                     var account = session.CreateCriteria(typeof(Account))
-                    .Add(Expression.Like("Login", login)).List<Account>().FirstOrDefault();
+                    .Add(Expression.Like("Login", login)).List<Account>().First();
                     return account;
                 }
             }

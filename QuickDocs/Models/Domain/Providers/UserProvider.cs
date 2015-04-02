@@ -70,14 +70,12 @@ namespace QuickDocs.Models.Domain.Providers
 
         public bool UserIsExsist(string login, string password)
         {
-            bool result = false;
+            if (login == "")
+                throw new Exception(String.Format("Поле Login не заполнено!"));
+            if(password=="")
+                throw new Exception(String.Format("Поле Password не заполнено!"));
 
-            if ((new AccountProvider()).Search(login).Password == password)
-            {
-                result = true;
-            }
-
-            return result;
+            return (new AccountProvider()).Search(login).Password == password;
         }
     }
 }
