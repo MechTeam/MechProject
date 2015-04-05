@@ -162,6 +162,7 @@
     <Compile Include="Models\Domain\Providers\StudentProvider.cs" />
     <Compile Include="Models\Domain\Providers\TeacherProvider.cs" />
     <Compile Include="Models\Domain\Providers\UserProvider.cs" />
+    <Compile Include="Models\Exceptions\EntityNotExistException.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -211,7 +212,9 @@
     <EmbeddedResource Include="Models\Mapping\Student.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\StudentInLesson.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Teacher.hbm.xml" />
-    <EmbeddedResource Include="Models\Mapping\User.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\Control.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\ControlType.hbm.xml" />

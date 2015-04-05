@@ -6,6 +6,7 @@ using NHibernate;
 using NHibernate.Criterion;
 using QuickDocs.Models.Domain.Entities;
 using QuickDocs.Models.Domain.Filters;
+using QuickDocs.Models.Exceptions;
 
 namespace QuickDocs.Models.Domain.Providers
 {
@@ -39,11 +40,21 @@ namespace QuickDocs.Models.Domain.Providers
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {
-                    var account = session.CreateCriteria(typeof(Account))
-                    .Add(Expression.Like("Login", login)).List<Account>().First();
+                    Account account = null;
+                    try
+                    {
+                        account = session.CreateCriteria(typeof(Account))
+                        .Add(Expression.Like("Login", login)).List<Account>().First();
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        EntityNotExistException accountNotExist = new EntityNotExistException("Пользователя с таким логином не существует", ex);
+                        throw accountNotExist;
+                    }
                     return account;
                 }
             }
-        }            
+        }        
     }
+   
 }
