@@ -21,6 +21,26 @@ namespace QuickDocs.Controllers
             return View();
         }
 
+		[HttpPost]
+		public ActionResult Index(String Login, String Password)
+		{
+			if (String.IsNullOrEmpty(Login))
+			{
+				ModelState.AddModelError("login", "Это поле обязательно для заполнения");
+			}
+			if (String.IsNullOrEmpty(Password))
+			{
+				ModelState.AddModelError("password", "Это поле обязательно для заполнения");
+			}
+			UserProvider provider = new UserProvider();
+			if (provider.UserIsExsist(Login, Password))
+			{
+				return RedirectToAction("Index", "Admin");
+			}
+			ModelState.AddModelError("validation", "Пользователя с таким логином и паролем нет в базе данных");
+			return View();
+		} 
+
         [HttpPost]
         public ActionResult LoginValidation(String input)
         {            

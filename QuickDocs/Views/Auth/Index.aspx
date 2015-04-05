@@ -7,7 +7,10 @@
                 <p>Логин:</p>
             </div>  
             <div class="textContainer">
-                <input id="loginTxt" name="Login" class="txt" type="text" />
+                <input id="loginTxt" name="Login" class="txt" type="text" />  
+                <div class="errorMessegeContainer">
+                    <%=Html.ValidationMessage("login") %>
+                </div>
             </div>
             <div class="messageContainer">
                 <p id="loginMessage" class="Message"></p>
@@ -19,6 +22,9 @@
             </div>
             <div class="textContainer">
                 <input id="passwordTxt" name="Password" class="txt" type="text" />
+                <div class="errorMessegeContainer">
+                    <%=Html.ValidationMessage("password") %>
+                </div>
             </div>
             <div class="messageContainer">
                 <p id="passwordMessage"></p>            
@@ -29,7 +35,10 @@
                 <input class="flat" type="submit" value="Регистрация" />
             </div>
             <div class="buttonContainer">
-                <input class="flat" type="button" value="Войти" onclick="location.href='<%= Url.Action("Index", "Admin") %>    '" />
+                <input class="flat" type="submit" value="Войти" />
+            </div>
+            <div>
+                <%=Html.ValidationMessage("validtion") %>
             </div>
         </div>
     <% } %>
