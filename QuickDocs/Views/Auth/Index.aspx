@@ -38,7 +38,7 @@
                 <input class="flat" type="submit" value="Войти" />
             </div>
             <div>
-                <%=Html.ValidationMessage("validtion") %>
+                <%=Html.ValidationMessage("validation") %>
             </div>
         </div>
     <% } %>

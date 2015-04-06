@@ -215,7 +215,9 @@
     <EmbeddedResource Include="Models\Mapping\User.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Models\Mapping\Role.hbm.xml" />
+    <EmbeddedResource Include="Models\Mapping\Role.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\Mapping\Control.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\ControlType.hbm.xml" />
     <EmbeddedResource Include="Models\Mapping\VisitsOfStudent.hbm.xml" />

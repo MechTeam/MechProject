@@ -7,6 +7,7 @@ using QuickDocs.Models.Domain.Entities;
 using QuickDocs.Models.Domain.Providers;
 using QuickDocs.Models.Domain.Filters;
 using QuickDocs.Logic;
+using QuickDocs.Models.Exceptions;
 
 
 namespace QuickDocs.Controllers
@@ -33,11 +34,17 @@ namespace QuickDocs.Controllers
 				ModelState.AddModelError("password", "Это поле обязательно для заполнения");
 			}
 			UserProvider provider = new UserProvider();
-			if (provider.UserIsExsist(Login, Password))
+			try
 			{
-				return RedirectToAction("Index", "Admin");
+				if (provider.UserIsExsist(Login, Password))
+				{
+					return RedirectToAction("Index", "Admin");
+				}
 			}
-			ModelState.AddModelError("validation", "Пользователя с таким логином и паролем нет в базе данных");
+			catch(EntityNotExistException ex)
+			{
+				ModelState.AddModelError("validation", ex);
+			}
 			return View();
 		} 
 
