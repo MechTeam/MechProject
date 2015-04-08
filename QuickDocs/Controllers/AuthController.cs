@@ -21,33 +21,40 @@ namespace QuickDocs.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        public ActionResult Index(String Login, String Password)
+        {
+            if (String.IsNullOrEmpty(Login))
+            {
+                ModelState.AddModelError("LoginMessage", "Заполните поле");
+            }
+
+            if (String.IsNullOrEmpty(Password))
+            {
+                ModelState.AddModelError("PasswordMessage", "Заполните поле");
+            }
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+
+            return View();
+
+        }
+
         [HttpPost]
         public ActionResult LoginValidation(String input)
         {            
             if (Request.IsAjaxRequest()) 
             {
-                if (input.Length < 5)
+                if (input.Length <= 5)
                 {
-                    return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.LoginSymbolQuantity) });
+                    return Json(new { result = MessageHelper.GetMessageDescription(MessageCode.LoginSymbolQuantity) });
                 }
 
-                try
-                {
-                    AccountProvider provider = new AccountProvider();
-
-                    IList<AuthenticationFilter> usersData = provider.GetListAuthentication();
-
-                    if (usersData.Select(x => x.EMail == input).FirstOrDefault())
-                    {
-                        return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.LoginIsExist) });
-                    }
-                }
-                catch (Exception)
-                {
-                    return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.InternalError) });
-                }
-
-                return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.OK) });
+                return Json(new { result = MessageHelper.GetMessageDescription(MessageCode.OK) });
             }
 
             return View();
@@ -60,10 +67,10 @@ namespace QuickDocs.Controllers
             {
                 if (input.Length < 5)
                 {
-                    return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.PasswordSymbolQuantity) });
+                    return Json(new { result = MessageHelper.GetMessageDescription(MessageCode.PasswordSymbolQuantity) });
                 }
 
-                return Json(new { result = MessageHelper.GetErrorDescription(MessageCode.OK) });
+                return Json(new { result = MessageHelper.GetMessageDescription(MessageCode.OK) });
             }
 
             return View();

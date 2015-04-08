@@ -4,24 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace QuickDocs.Logic.WebTemplateObject
 {
     public class ControlWTO
     {
         string name;
-        int maxpoints;
-        int minpoints;
-        int modulenum;
-        int numcontrol;
+        int maxPoints;
+        int minPoints;
+        int moduleNum;
+        int numControl;
         int week;
 
         public ControlWTO(Control control)
         {
             name = control.Name;
-            maxpoints = control.MaxPoints;
-            minpoints = control.MinPoints;
-            modulenum = control.ModuleNum;
-            numcontrol = control.NumControl;
+            maxPoints = control.MaxPoints;
+            minPoints = control.MinPoints;
+            moduleNum = control.ModuleNum;
+            numControl = control.NumControl;
             week = control.Week;
         }
 
@@ -31,19 +32,19 @@ namespace QuickDocs.Logic.WebTemplateObject
         }
         public int MaxPoints
         {
-            get { return maxpoints; }
+            get { return maxPoints; }
         }
         public int MinPoints
         {
-            get { return minpoints; }
+            get { return minPoints; }
         }
         public int ModuleNum
         {
-            get { return modulenum; }
+            get { return moduleNum; }
         }
         public int NumControl
         {
-            get { return numcontrol; }
+            get { return numControl; }
         }
         public int Week
         {

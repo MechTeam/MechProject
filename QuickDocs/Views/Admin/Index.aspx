@@ -6,13 +6,23 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2>ADMIN PAGE INDEX</h2>
 <div id="adminPanelContainer">
     <% Html.RenderAction("AdminPanel"); %>
 </div>
     
 <div id="userContainer">
-    <% Html.RenderAction("UserList"); %>
+   <% using (Ajax.BeginForm(new AjaxOptions 
+   { 
+       HttpMethod = "POST",
+       InsertionMode = InsertionMode.Replace,
+       UpdateTargetId = "ajaxFormContainer"
+   }))
+   { %>
+    
+    <div id="ajaxFormContainer">                
+    </div>
+<% } %>
 </div>
 
 </asp:Content>

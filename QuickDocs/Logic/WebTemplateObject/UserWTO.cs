@@ -28,10 +28,22 @@ namespace QuickDocs.Logic.WebTemplateObject
             return string.Join(",", Roles);
         }
 
+        public static IList<UserWTO> getUserListWTO(IList<User> usersData)
+        {
+            IList<UserWTO> users = new List<UserWTO>();
+
+            foreach (User user in usersData)
+            {
+                users.Add(new UserWTO(user));
+            }
+
+            return users;
+        }
+
         private IList<string> getRolesName(IList<Role> roles)
         {
             return roles.Select(x => x.Name).ToList();
-        }
+        }        
 
         public string Name
         {

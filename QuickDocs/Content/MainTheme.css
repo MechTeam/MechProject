@@ -62,11 +62,13 @@ h1 {
     margin: 0 auto;
     font-family: Verdana;
     font-size: 14px;    
+    padding: 5px;
 }
 
 .textContainer {
     width: 150px;
     margin: 0 auto;
+    padding: 5px;
 }
 
 .messageContainer {    
@@ -77,6 +79,7 @@ h1 {
 .buttonContainer {
     width: 150px;
     margin: 0 auto;
+    padding: 5px;
 }
 
 .userElementRow {
@@ -95,9 +98,13 @@ h1 {
     height: 25px;
 }
 
-input[type="text"].txt {
+.txt {
     width: inherit;
     height: 20px;        
+}
+
+label {
+    font-size: 14px;
 }
 
 .flatActionLink {
@@ -119,9 +126,13 @@ input[type="submit"], input[type="button"].flat  {
     border: none;
     width: inherit;
     height: 25px;   
-    font-size: 14px;
+    font-size: 14px;    
 }
 
 .userElementRow div {
-    float: left;
+    float: left;    
+}
+
+#changeFormContainer {
+    width: 1000px;
 }

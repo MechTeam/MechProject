@@ -19,7 +19,7 @@ namespace QuickDocs.Logic
             _errors.Add(MessageCode.OK, "OK");
         }
 
-        public static String GetErrorDescription(MessageCode code)
+        public static String GetMessageDescription(MessageCode code)
         {
             try
             {
