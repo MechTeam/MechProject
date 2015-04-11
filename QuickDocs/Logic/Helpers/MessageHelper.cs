@@ -17,6 +17,9 @@ namespace QuickDocs.Logic
             _errors.Add(MessageCode.PasswordSymbolQuantity, "Минимум 6 символов");
             _errors.Add(MessageCode.InternalError, "Внутренняя ошибка");
             _errors.Add(MessageCode.OK, "OK");
+			_errors.Add(MessageCode.LoginNull, "Это поле обязательно для заполнения");
+			_errors.Add(MessageCode.PasswordNull, "Это поле обязательно для заполнения");
+			_errors.Add(MessageCode.ValidationError, "Неверный логин/пароль");
         }
 
         public static String GetErrorDescription(MessageCode code)
@@ -40,7 +43,10 @@ namespace QuickDocs.Logic
         LoginIsExist,
         InternalError,
         PasswordSymbolQuantity,
-        OK
+        OK,
+		LoginNull,
+		PasswordNull,
+		ValidationError
     }
 
     

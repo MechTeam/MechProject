@@ -25,25 +25,27 @@ namespace QuickDocs.Controllers
 		[HttpPost]
 		public ActionResult Index(String Login, String Password)
 		{
+			const string loginErrorName = "login";
+			const string passwordErrorName = "password";
+			const string validationErrorName="validetion";
+
 			if (String.IsNullOrEmpty(Login))
 			{
-				ModelState.AddModelError("login", "Это поле обязательно для заполнения");
+				ModelState.AddModelError(loginErrorName,MessageHelper.GetErrorDescription(MessageCode.LoginNull) );
 			}
 			if (String.IsNullOrEmpty(Password))
 			{
-				ModelState.AddModelError("password", "Это поле обязательно для заполнения");
+				ModelState.AddModelError(passwordErrorName,MessageHelper.GetErrorDescription(MessageCode.PasswordNull));
 			}
-			UserProvider provider = new UserProvider();
-			try
+
+			AccountProvider provider = new AccountProvider();
+			if (provider.LoginAndPasswordIsCorrect(Login, Password))
 			{
-				if (provider.UserIsExsist(Login, Password))
-				{
-					return RedirectToAction("Index", "Admin");
-				}
+				return RedirectToAction("Index", "Admin");
 			}
-			catch(EntityNotExistException ex)
+			else
 			{
-				ModelState.AddModelError("validation", ex);
+				ModelState.AddModelError(validationErrorName,MessageHelper.GetErrorDescription(MessageCode.ValidationError));
 			}
 			return View();
 		} 

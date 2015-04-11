@@ -67,15 +67,5 @@ namespace QuickDocs.Models.Domain.Providers
                 }
             }
         }
-
-        public bool UserIsExsist(string login, string password)
-        {
-			//if (String.IsNullOrEmpty(login))
-			//	throw new Exception(String.Format("Поле Login не заполнено!"));
-			//if (String.IsNullOrEmpty(password))
-			//	throw new Exception(String.Format("Поле Password не заполнено!"));
-
-            return (new AccountProvider()).Search(login).Password == password;
-        }
     }
 }
