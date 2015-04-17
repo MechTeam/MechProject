@@ -54,7 +54,12 @@ namespace QuickDocs.Models.Domain.Providers
                     return account;
                 }
             }
-        }        
+        }
+
+        public bool UserIsExsist(string login, string password)
+        {
+            return (new AccountProvider()).Search(login).Password == password;
+        }
     }
    
 }
