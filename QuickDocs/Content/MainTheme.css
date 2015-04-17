@@ -74,6 +74,10 @@ h1 {
     margin: 0 auto;
 }
 
+.errorMessegeContainer {
+    width: 200px;
+    margin: 0 auto;
+}
 .buttonContainer {
     width: 150px;
     margin: 0 auto;

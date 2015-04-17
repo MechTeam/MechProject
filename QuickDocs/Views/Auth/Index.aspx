@@ -37,7 +37,7 @@
             <div class="buttonContainer">
                 <input class="flat" type="submit" value="Войти" />
             </div>
-            <div>
+            <div class="errorMessegeContainer">
                 <%=Html.ValidationMessage("validation") %>
             </div>
         </div>
