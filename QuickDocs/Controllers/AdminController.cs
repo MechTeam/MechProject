@@ -17,7 +17,9 @@ namespace QuickDocs.Controllers
         //[Authorize(Roles="SuperAdmin")]
         public ActionResult Index()
         {
-            return View();
+            TempData["message"] = "Проверка WQD-16";
+            return RedirectToAction("Error", "Error");
+            //return View();
         }
 
         //[Authorize(Roles="SuperAdmin")]
